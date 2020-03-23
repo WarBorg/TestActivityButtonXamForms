@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ActivityButton.TestView">
+    <ContentView.Content>
+        <StackLayout>
+            <Grid BackgroundColor="Pink"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="Start">
+                <Button Margin="0,0,32,0"
+                        Text="Button1"                            
+                        BackgroundColor="Yellow"
+                        TextColor="Black"
+                        IsEnabled="{Binding Source={x:Reference CheckBox1}, Path=IsChecked}"/>
+                    <Label BackgroundColor="Red"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                           Margin="0,0,0,25"/>
+            </Grid>
+            <AbsoluteLayout BackgroundColor="Pink"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                <Button Text="Button2"
+                        AbsoluteLayout.LayoutBounds="0,0,0.5,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="Orange"
+                        TextColor="Black"
+                        Margin="0"
+                        IsEnabled="{Binding Source={x:Reference CheckBox2}, Path=IsChecked}"/>
+                <Label BackgroundColor="Red"
+                       WidthRequest="300"
+                       HeightRequest="20"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout BackgroundColor="Pink"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                <Button Text="Button3"
+                        AbsoluteLayout.LayoutBounds="0,0,0.5,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="Coral"
+                        TextColor="Black"
+                        Margin="0"
+                        IsEnabled="{Binding Source={x:Reference CheckBox3}, Path=IsChecked}"/>
+                <Label BackgroundColor="Red"
+                       WidthRequest="300"
+                       HeightRequest="20"/>
+            </AbsoluteLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+                <Label Text="Button1 enabled:" />
+                <CheckBox x:Name="CheckBox1"
+                          IsChecked="True"
+                          VerticalOptions="Start"
+                          HorizontalOptions="StartAndExpand"/>
+                <Label Text="Button2 enabled:" />
+                <CheckBox x:Name="CheckBox2"
+                          IsChecked="True"
+                          VerticalOptions="Start"
+                          HorizontalOptions="StartAndExpand"/>
+                <Label Text="Button3 enabled:" />
+                <CheckBox x:Name="CheckBox3"
+                          IsChecked="False"
+                          VerticalOptions="Start"
+                          HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

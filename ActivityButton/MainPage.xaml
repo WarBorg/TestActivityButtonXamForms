@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ActivityButton.MainPage">
+    <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <AbsoluteLayout BackgroundColor="Pink"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Button Text="Click me more"
+                        AbsoluteLayout.LayoutBounds="0,0,0.5,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="Blue"
+                        TextColor="White"
+                        Margin="0"
+                        IsEnabled="{Binding Source={x:Reference CheckBox}, Path=IsChecked}"/>
+                <Label BackgroundColor="Red"
+                       WidthRequest="300"
+                       HeightRequest="20"/>
+            </AbsoluteLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Button enabled:" />
+                <CheckBox x:Name="CheckBox"
+                          IsChecked="True"
+                          VerticalOptions="Start"
+                          HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            <Button Text="Navigate"
+                    Clicked="Button_Clicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

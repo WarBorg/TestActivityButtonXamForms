@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ActivityButton"
+             x:Class="ActivityButton.NewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="WITH SCROLLVIEW"
+                   FontAttributes="Bold"
+                   FontSize="Title"/>
+            <BoxView HorizontalOptions="FillAndExpand"
+                     HeightRequest="2"
+                     Color="Black"/>
+            <ScrollView>
+                <local:TestView />
+            </ScrollView>
+            <BoxView HorizontalOptions="FillAndExpand"
+                     HeightRequest="1"
+                     Color="Black"/>
+            <Label Text="WITHOUT SCROLLVIEW"
+                   FontAttributes="Bold"
+                   FontSize="Title"/>
+            <BoxView HorizontalOptions="FillAndExpand"
+                     HeightRequest="2"
+                     Color="Black"/>
+            <local:TestView />
+            <BoxView HorizontalOptions="FillAndExpand"
+                     HeightRequest="1"
+                     Color="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
